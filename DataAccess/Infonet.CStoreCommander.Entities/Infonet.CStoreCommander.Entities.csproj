@@ -1,0 +1,269 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BA59800D-27F8-432C-8E02-03CCF5E68E21}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Infonet.CStoreCommander.Entities</RootNamespace>
+    <AssemblyName>Infonet.CStoreCommander.Entities</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath />
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Address.cs" />
+    <Compile Include="ArPaymentRequest.cs" />
+    <Compile Include="AR_Payment.cs" />
+    <Compile Include="AssociateCharge.cs" />
+    <Compile Include="BatchTotal.cs" />
+    <Compile Include="BackOfficePolicy.cs" />
+    <Compile Include="BillCoin.cs" />
+    <Compile Include="BottleReturn.cs" />
+    <Compile Include="BottleReturns.cs" />
+    <Compile Include="BR_Payment.cs" />
+    <Compile Include="Card.cs" />
+    <Compile Include="CardProcess.cs" />
+    <Compile Include="CardProduct.cs" />
+    <Compile Include="CardProductRestriction.cs" />
+    <Compile Include="CardProfile.cs" />
+    <Compile Include="CardProfilePrompt.cs" />
+    <Compile Include="CardProfileTimeLimit.cs" />
+    <Compile Include="CardPrompt.cs" />
+    <Compile Include="CardPrompts.cs" />
+    <Compile Include="CardSale.cs" />
+    <Compile Include="CardSummary.cs" />
+    <Compile Include="CardTender.cs" />
+    <Compile Include="Card_Code.cs" />
+    <Compile Include="Card_Codes.cs" />
+    <Compile Include="Card_Reprint.cs" />
+    <Compile Include="Card_Types.cs" />
+    <Compile Include="Carwash.cs" />
+    <Compile Include="Cash.cs" />
+    <Compile Include="CashBonus.cs" />
+    <Compile Include="CashBonusDraw.cs" />
+    <Compile Include="CashButton.cs" />
+    <Compile Include="CashDraw.cs" />
+    <Compile Include="CashDrawer.cs" />
+    <Compile Include="CashDrop.cs" />
+    <Compile Include="CAssignment.cs" />
+    <Compile Include="CFuelPrice.cs" />
+    <Compile Include="CGrade.cs" />
+    <Compile Include="CGradePriceIncrement.cs" />
+    <Compile Include="Charge.cs" />
+    <Compile Include="Charges.cs" />
+    <Compile Include="Charge_Tax.cs" />
+    <Compile Include="Charge_Taxes.cs" />
+    <Compile Include="CIP.cs" />
+    <Compile Include="ClientCard.cs" />
+    <Compile Include="ClientGroup.cs" />
+    <Compile Include="CloseBatch.cs" />
+    <Compile Include="Close_Line.cs" />
+    <Compile Include="clsPrepay.cs" />
+    <Compile Include="CountReport.cs" />
+    <Compile Include="Coupon.cs" />
+    <Compile Include="CPricesToDisplay.cs" />
+    <Compile Include="CPump.cs" />
+    <Compile Include="Credit_Card.cs" />
+    <Compile Include="CTankInfo.cs" />
+    <Compile Include="CTankType.cs" />
+    <Compile Include="CTierLevelPriceDiff.cs" />
+    <Compile Include="Customer.cs" />
+    <Compile Include="CustomerDisplay.cs" />
+    <Compile Include="Department.cs" />
+    <Compile Include="Device.cs" />
+    <Compile Include="DipInput.cs" />
+    <Compile Include="DiscountTender.cs" />
+    <Compile Include="DownloadInfo.cs" />
+    <Compile Include="DropHeader.cs" />
+    <Compile Include="DropLine.cs" />
+    <Compile Include="EodGroup.cs" />
+    <Compile Include="Field.cs" />
+    <Compile Include="FlashReportTotals.cs" />
+    <Compile Include="FormatAnswers.cs" />
+    <Compile Include="FuelPrice.cs" />
+    <Compile Include="FuelSale.cs" />
+    <Compile Include="GCPayment.cs" />
+    <Compile Include="GCTender.cs" />
+    <Compile Include="GCTenders.cs" />
+    <Compile Include="GetProperty.cs" />
+    <Compile Include="GiftCardTender.cs" />
+    <Compile Include="GiftCert.cs" />
+    <Compile Include="GiveX.cs" />
+    <Compile Include="GivexReceiptType.cs" />
+    <Compile Include="GivexReport.cs" />
+    <Compile Include="GroupPriceHead.cs" />
+    <Compile Include="GroupPriceLine.cs" />
+    <Compile Include="HotButton.cs" />
+    <Compile Include="HotButtons.cs" />
+    <Compile Include="KickBack.cs" />
+    <Compile Include="KitItem.cs" />
+    <Compile Include="K_Charge.cs" />
+    <Compile Include="K_Charges.cs" />
+    <Compile Include="Line_Kit.cs" />
+    <Compile Include="Line_Kits.cs" />
+    <Compile Include="Line_Tax.cs" />
+    <Compile Include="Line_Taxes.cs" />
+    <Compile Include="MessageButton.cs" />
+    <Compile Include="mPrivateGlobals.cs" />
+    <Compile Include="OptData.cs" />
+    <Compile Include="OverrideCode.cs" />
+    <Compile Include="PayAtPump.cs" />
+    <Compile Include="PayAtPumpCredit.cs" />
+    <Compile Include="PayAtPumpSale.cs" />
+    <Compile Include="Payment.cs" />
+    <Compile Include="Payout.cs" />
+    <Compile Include="Payout_Tax.cs" />
+    <Compile Include="Payout_Taxes.cs" />
+    <Compile Include="Phone.cs" />
+    <Compile Include="Phones.cs" />
+    <Compile Include="PLUMast.cs" />
+    <Compile Include="Policy.cs" />
+    <Compile Include="ProductTaxExempt.cs" />
+    <Compile Include="Promo.cs" />
+    <Compile Include="Promos.cs" />
+    <Compile Include="Promo_Line.cs" />
+    <Compile Include="Promo_Lines.cs" />
+    <Compile Include="PropaneGrade.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PSLogo.cs" />
+    <Compile Include="PSProduct.cs" />
+    <Compile Include="PSProfile.cs" />
+    <Compile Include="PSRefund.cs" />
+    <Compile Include="PSTransaction.cs" />
+    <Compile Include="PSVoucher.cs" />
+    <Compile Include="PumpControl.cs" />
+    <Compile Include="PumpStatus.cs" />
+    <Compile Include="PumpGrade.cs" />
+    <Compile Include="ReasonType.cs" />
+    <Compile Include="recPump.cs" />
+    <Compile Include="Register.cs" />
+    <Compile Include="RegularPriceCheck.cs" />
+    <Compile Include="Report.cs" />
+    <Compile Include="Reprint_Cards.cs" />
+    <Compile Include="Restriction.cs" />
+    <Compile Include="Restrictions.cs" />
+    <Compile Include="Return_Reason.cs" />
+    <Compile Include="Return_Reasons.cs" />
+    <Compile Include="Sale.cs" />
+    <Compile Include="SaleHead.cs" />
+    <Compile Include="SaleLineReason.cs" />
+    <Compile Include="SaleTend.cs" />
+    <Compile Include="SaleTendAmount.cs" />
+    <Compile Include="SaleType.cs" />
+    <Compile Include="SaleVendorCoupon.cs" />
+    <Compile Include="SaleVendorCouponLine.cs" />
+    <Compile Include="SaleVendorCouponLines.cs" />
+    <Compile Include="SaleVendors.cs" />
+    <Compile Include="Sale_Line.cs" />
+    <Compile Include="Sale_Lines.cs" />
+    <Compile Include="Sale_Tax.cs" />
+    <Compile Include="Sale_Taxes.cs" />
+    <Compile Include="Sale_Totals.cs" />
+    <Compile Include="Security.cs" />
+    <Compile Include="Service.cs" />
+    <Compile Include="Shift.cs" />
+    <Compile Include="Sound.cs" />
+    <Compile Include="SpecialPriceCheck.cs" />
+    <Compile Include="SP_Price.cs" />
+    <Compile Include="SP_Prices.cs" />
+    <Compile Include="StockBr.cs" />
+    <Compile Include="StockInfo.cs" />
+    <Compile Include="StockItem.cs" />
+    <Compile Include="PriceL.cs" />
+    <Compile Include="StockPriceCheck.cs" />
+    <Compile Include="StockTax.cs" />
+    <Compile Include="StockTaxInfo.cs" />
+    <Compile Include="Store.cs" />
+    <Compile Include="Store_Credit.cs" />
+    <Compile Include="StringFormat.cs" />
+    <Compile Include="SusHead.cs" />
+    <Compile Include="TankDip.cs" />
+    <Compile Include="TaxCreditLine.cs" />
+    <Compile Include="TaxCreditLines.cs" />
+    <Compile Include="TaxExemptReason.cs" />
+    <Compile Include="TaxExemptReasons.cs" />
+    <Compile Include="TaxExemptSale.cs" />
+    <Compile Include="TaxExemptSaleLine.cs" />
+    <Compile Include="TaxExemptSaleLines.cs" />
+    <Compile Include="TaxMast.cs" />
+    <Compile Include="TaxRate.cs" />
+    <Compile Include="teCardholder.cs" />
+    <Compile Include="Tender.cs" />
+    <Compile Include="TenderCard.cs" />
+    <Compile Include="Tenders.cs" />
+    <Compile Include="Tend_Totals.cs" />
+    <Compile Include="TePurchaseHeader.cs" />
+    <Compile Include="tePurchaseItem.cs" />
+    <Compile Include="tePurchaseList.cs" />
+    <Compile Include="Terminal.cs" />
+    <Compile Include="teSystem.cs" />
+    <Compile Include="teTreatyNo.cs" />
+    <Compile Include="Theme.cs" />
+    <Compile Include="TierLevelResponse.cs" />
+    <Compile Include="Till.cs" />
+    <Compile Include="TillClose.cs" />
+    <Compile Include="Till_Close.cs" />
+    <Compile Include="TotalHighLow.cs" />
+    <Compile Include="TreatyNo.cs" />
+    <Compile Include="TotalizerHist.cs" />
+    <Compile Include="UnCompletePrepayResponse.cs" />
+    <Compile Include="User.cs" />
+    <Compile Include="User_Group.cs" />
+    <Compile Include="Vendor.cs" />
+    <Compile Include="VendorCoupon.cs" />
+    <Compile Include="VendorCoupons.cs" />
+    <Compile Include="VerifyPaymentByAccount.cs" />
+    <Compile Include="VoidSale.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Services\Infonet.CStoreCommander.Resources\Infonet.CStoreCommander.Resources.csproj">
+      <Project>{8595B8E6-C24B-4085-83D8-55D53F523F0F}</Project>
+      <Name>Infonet.CStoreCommander.Resources</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

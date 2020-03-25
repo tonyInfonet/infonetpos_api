@@ -1,0 +1,362 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4DCD3619-002A-4E07-9B4F-CB6CCB66E1B9}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Infonet.CStoreCommander.BusinessLayer</RootNamespace>
+    <AssemblyName>Infonet.CStoreCommander.BusinessLayer</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath />
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="adodb, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="AxInterop.SIGPLUSLib">
+      <HintPath>..\..\Dependencies\AxInterop.SIGPLUSLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.ADOX">
+      <HintPath>obj\Debug\Interop.ADOX.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Interop.CryptoLightLib">
+      <HintPath>obj\Debug\Interop.CryptoLightLib.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Interop.MSCommLib">
+      <HintPath>obj\Debug\Interop.MSCommLib.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Interop.MSXML2">
+      <HintPath>obj\Debug\Interop.MSXML2.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Interop.OposCashDrawer_1_6_Lib">
+      <HintPath>..\..\Dependencies\Interop.OposCashDrawer_1_6_Lib.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Interop.OposLineDisplay_1_6_Lib">
+      <HintPath>..\..\Dependencies\Interop.OposLineDisplay_1_6_Lib.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Interop.OposMSR_1_6_Lib">
+      <HintPath>..\..\Dependencies\Interop.OposMSR_1_6_Lib.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Interop.OposPOSPrinter_1_6_Lib">
+      <HintPath>..\..\Dependencies\Interop.OposPOSPrinter_1_6_Lib.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Interop.OposScanner_1_6_Lib">
+      <HintPath>..\..\Dependencies\Interop.OposScanner_1_6_Lib.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Interop.SCALELib">
+      <HintPath>obj\Debug\Interop.SCALELib.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Interop.SIGPLUSLib">
+      <HintPath>..\..\Dependencies\Interop.SIGPLUSLib.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="interop.sysinfolib">
+      <HintPath>..\..\Dependencies\interop.sysinfolib.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.15.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\log4net.2.0.5\lib\net45-full\log4net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualBasic.Compatibility" />
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="RTVP.Common">
+      <HintPath>..\..\Dependencies\RTVP.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="RTVP.POSService">
+      <HintPath>..\..\Dependencies\RTVP.POSService.dll</HintPath>
+    </Reference>
+    <Reference Include="SocketTools.SocketWrench">
+      <HintPath>..\..\Dependencies\SocketTools.SocketWrench.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Caching" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Http, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.AspNet.WebApi.Core.5.2.3\lib\net45\System.Web.Http.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WebApi.OutputCache.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Strathweb.CacheOutput.WebApi2.0.10.0\lib\net45\WebApi.OutputCache.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="WebApi.OutputCache.V2, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Strathweb.CacheOutput.WebApi2.0.10.0\lib\net45\WebApi.OutputCache.V2.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Entities\AiteCardResponse.cs" />
+    <Compile Include="Entities\BasePrices.cs" />
+    <Compile Include="Entities\CashBonusDrawButton.cs" />
+    <Compile Include="Entities\CashDrawButton.cs" />
+    <Compile Include="Entities\ChangeIncrement.cs" />
+    <Compile Include="Entities\Chaps_Main.cs" />
+    <Compile Include="Entities\CloseBatchSale.cs" />
+    <Compile Include="Entities\CloseCurrentTillResponseModel.cs" />
+    <Compile Include="Entities\Comm.cs" />
+    <Compile Include="Entities\DeviceSetting.cs" />
+    <Compile Include="Entities\GaskingKickback.cs" />
+    <Compile Include="Entities\GiftCard.cs" />
+    <Compile Include="Entities\modColrForm.cs" />
+    <Compile Include="Entities\modGlobalFunctions.cs" />
+    <Compile Include="Entities\modNRGT.cs" />
+    <Compile Include="Entities\PriceToDisplay.cs" />
+    <Compile Include="Entities\PSVoucherInfo.cs" />
+    <Compile Include="Manager\AckrooManager.cs" />
+    <Compile Include="Manager\CarwashManager.cs" />
+    <Compile Include="Manager\CashBonusManager.cs" />
+    <Compile Include="Manager\FuelDiscountManager.cs" />
+    <Compile Include="Manager\FuelPrepayManager.cs" />
+    <Compile Include="Manager\IAckrooManager.cs" />
+    <Compile Include="Manager\ICarwashManager.cs" />
+    <Compile Include="Manager\ICashBonusManager.cs" />
+    <Compile Include="Manager\IFuelDiscountManager.cs" />
+    <Compile Include="Manager\IFuelPrepayManager.cs" />
+    <Compile Include="Manager\IFuelPumpManager.cs" />
+    <Compile Include="Manager\IKickBackManager.cs" />
+    <Compile Include="Manager\IMaintenanceManager.cs" />
+    <Compile Include="Manager\IPaymentSourceManager.cs" />
+    <Compile Include="Manager\IPrepayManager.cs" />
+    <Compile Include="Manager\IPropaneManager.cs" />
+    <Compile Include="Manager\ITaxExemptSaleManager.cs" />
+    <Compile Include="Manager\ITierLevelManager.cs" />
+    <Compile Include="Manager\ITillCloseManager.cs" />
+    <Compile Include="Manager\IUnCompletePrepayManager.cs" />
+    <Compile Include="Manager\IWexManager.cs" />
+    <Compile Include="Manager\IXMLManager.cs" />
+    <Compile Include="Manager\KickBackManager.cs" />
+    <Compile Include="Manager\MaintenanceManager.cs" />
+    <Compile Include="Manager\PaymentSourceManager.cs" />
+    <Compile Include="Manager\PrepayManager.cs" />
+    <Compile Include="Entities\modPrint.cs" />
+    <Compile Include="Entities\modStringPad.cs" />
+    <Compile Include="Entities\modTPS.cs" />
+    <Compile Include="Entities\PayAtPumpSale.cs" />
+    <Compile Include="Entities\PayInsideSale.cs" />
+    <Compile Include="Entities\PaymentSale.cs" />
+    <Compile Include="Entities\ReprintReport.cs" />
+    <Compile Include="Entities\ReprintSale.cs" />
+    <Compile Include="Entities\SaleLineEdit.cs" />
+    <Compile Include="Entities\Shift.cs" />
+    <Compile Include="Entities\Sound.cs" />
+    <Compile Include="Entities\Stock.cs" />
+    <Compile Include="Entities\StockMessage.cs" />
+    <Compile Include="Entities\VCoupon.cs" />
+    <Compile Include="Entities\VendorPayout.cs" />
+    <Compile Include="Manager\CacheManager.cs" />
+    <Compile Include="Manager\CardManager.cs" />
+    <Compile Include="Manager\CardPromptManager.cs" />
+    <Compile Include="Manager\CashManager.cs" />
+    <Compile Include="Manager\CreditCardManager.cs" />
+    <Compile Include="Manager\DipInputManager.cs" />
+    <Compile Include="Manager\FuelPumpManager.cs" />
+    <Compile Include="Manager\FuelPumpNotificationManager.cs" />
+    <Compile Include="Manager\GetPropertyManager.cs" />
+    <Compile Include="Manager\GivexClientManager.cs" />
+    <Compile Include="Manager\ICardManager.cs" />
+    <Compile Include="Manager\ICardPromptManager.cs" />
+    <Compile Include="Manager\ICashManager.cs" />
+    <Compile Include="Manager\ICreditCardManager.cs" />
+    <Compile Include="Manager\IDipInputManager.cs" />
+    <Compile Include="Manager\IFuelPumpNotificationManager.cs" />
+    <Compile Include="Manager\IGetPropertyManager.cs" />
+    <Compile Include="Manager\IGivexClientManager.cs" />
+    <Compile Include="Manager\IMainManager.cs" />
+    <Compile Include="Manager\IMessageManager.cs" />
+    <Compile Include="Manager\IOverLimitManager.cs" />
+    <Compile Include="Manager\IOverrideLimitManager.cs" />
+    <Compile Include="Manager\IPayAtPumpManager.cs" />
+    <Compile Include="Manager\IPayoutManager.cs" />
+    <Compile Include="Manager\IPriceCheckManager.cs" />
+    <Compile Include="Manager\IPromoManager.cs" />
+    <Compile Include="Manager\EncryptDecryptUtilityManager.cs" />
+    <Compile Include="Manager\IEncryptDecryptUtilityManager.cs" />
+    <Compile Include="Manager\IPaymentManager.cs" />
+    <Compile Include="Manager\GivexManager.cs" />
+    <Compile Include="Manager\IGivexManager.cs" />
+    <Compile Include="Manager\IPurchaseItemManager.cs" />
+    <Compile Include="Manager\IPurchaseListManager.cs" />
+    <Compile Include="Manager\IReasonManager.cs" />
+    <Compile Include="Manager\IReceiptManager.cs" />
+    <Compile Include="Manager\IReturnSaleManager.cs" />
+    <Compile Include="Manager\ISaleHeadManager.cs" />
+    <Compile Include="Manager\ISaleLineManager.cs" />
+    <Compile Include="Manager\ISaleManager.cs" />
+    <Compile Include="Manager\ISaleVendorCouponManager.cs" />
+    <Compile Include="Manager\ISignatureManager.cs" />
+    <Compile Include="Manager\IStockManager.cs" />
+    <Compile Include="Manager\ISuspendedSaleManger.cs" />
+    <Compile Include="Manager\ITaxExemptSaleLineManager.cs" />
+    <Compile Include="Manager\ITaxManager.cs" />
+    <Compile Include="Manager\ITeCardholderManager.cs" />
+    <Compile Include="Manager\ITenderManager.cs" />
+    <Compile Include="Manager\ITeSystemManager.cs" />
+    <Compile Include="Manager\IThemeManager.cs" />
+    <Compile Include="Manager\ITreatyManager.cs" />
+    <Compile Include="Manager\MainManager.cs" />
+    <Compile Include="Manager\ManagerBase.cs" />
+    <Compile Include="Manager\MessageManager.cs" />
+    <Compile Include="Manager\OverLimitManager.cs" />
+    <Compile Include="Manager\OverrideLimitManager.cs" />
+    <Compile Include="Manager\PayAtPumpManager.cs" />
+    <Compile Include="Manager\PayoutManager.cs" />
+    <Compile Include="Manager\PriceCheckManager.cs" />
+    <Compile Include="Manager\PromoManager.cs" />
+    <Compile Include="Manager\PaymentManager.cs" />
+    <Compile Include="Manager\PropaneManager.cs" />
+    <Compile Include="Manager\PurchaseItemManager.cs" />
+    <Compile Include="Manager\PurchaseListManager.cs" />
+    <Compile Include="Manager\ReasonManager.cs" />
+    <Compile Include="Manager\ReceiptManager.cs" />
+    <Compile Include="Manager\ReturnSaleManager.cs" />
+    <Compile Include="Manager\SaleHeadManager.cs" />
+    <Compile Include="Manager\SaleLineManager.cs" />
+    <Compile Include="Manager\SaleVendorCouponManager.cs" />
+    <Compile Include="Manager\SignatureManager.cs" />
+    <Compile Include="Manager\StockManager.cs" />
+    <Compile Include="Manager\SuspendedSaleManager.cs" />
+    <Compile Include="Manager\TaxExemptSaleLineManager.cs" />
+    <Compile Include="Manager\TaxExemptSaleManager.cs" />
+    <Compile Include="Manager\TaxManager.cs" />
+    <Compile Include="Manager\TeCardholderManager.cs" />
+    <Compile Include="Manager\TenderManager.cs" />
+    <Compile Include="Manager\TeSystemManager.cs" />
+    <Compile Include="Manager\ThemeManager.cs" />
+    <Compile Include="Manager\TierLevelManager.cs" />
+    <Compile Include="Manager\TillCloseManager.cs" />
+    <Compile Include="Entities\TillCloseResponse.cs" />
+    <Compile Include="Manager\TreatyManager.cs" />
+    <Compile Include="Entities\OverLimitResponse.cs" />
+    <Compile Include="Entities\OverrideLimitResponse.cs" />
+    <Compile Include="Entities\QiteCardResponse.cs" />
+    <Compile Include="Entities\SaleSummaryResponse.cs" />
+    <Compile Include="Manager\UnCompletePrepayManager.cs" />
+    <Compile Include="Manager\WexManager.cs" />
+    <Compile Include="Manager\XMLManager.cs" />
+    <Compile Include="TCPAgent.cs" />
+    <Compile Include="UDPAgent.cs" />
+    <Compile Include="Entities\XML.cs" />
+    <Compile Include="Manager\BottleManager.cs" />
+    <Compile Include="Manager\CustomerManager.cs" />
+    <Compile Include="Manager\IBottleManager.cs" />
+    <Compile Include="Manager\ICustomerManager.cs" />
+    <Compile Include="Manager\ILoginManager.cs" />
+    <Compile Include="Manager\IPolicyManager.cs" />
+    <Compile Include="Manager\ITillManager.cs" />
+    <Compile Include="Manager\LoginManager.cs" />
+    <Compile Include="Manager\PolicyManager.cs" />
+    <Compile Include="Manager\SaleManager.cs" />
+    <Compile Include="Manager\TillManager.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utilities\SocketWrench.cs" />
+    <Compile Include="Utilities\TokenGenerator.cs" />
+    <Compile Include="Utilities\TokenValidator.cs" />
+    <Compile Include="Entities\TreatyNumberResponse.cs" />
+    <Compile Include="Utilities\Helper.cs" />
+    <Compile Include="Utilities\Constants.cs" />
+    <Compile Include="Utilities\EncryptionManager.cs" />
+    <Compile Include="Utilities\ErrorMessage.cs" />
+    <Compile Include="Utilities\MemoryCacher.cs" />
+    <Compile Include="Variables.cs" />
+    <Compile Include="Entities\VerifyTaxExempt.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\DataAccess\Infonet.CStoreCommander.ADOData\Infonet.CStoreCommander.ADOData.csproj">
+      <Project>{63203fcc-bd31-4087-91dc-1ed23d609230}</Project>
+      <Name>Infonet.CStoreCommander.ADOData</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\DataAccess\Infonet.CStoreCommander.Entities\Infonet.CStoreCommander.Entities.csproj">
+      <Project>{ba59800d-27f8-432c-8e02-03ccf5e68e21}</Project>
+      <Name>Infonet.CStoreCommander.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Infonet.CStoreCommander.Logging\Infonet.CStoreCommander.Logging.csproj">
+      <Project>{4C57BC66-49B9-4D29-88A6-42AD135B2928}</Project>
+      <Name>Infonet.CStoreCommander.Logging</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Infonet.CStoreCommander.Resources\Infonet.CStoreCommander.Resources.csproj">
+      <Project>{8595b8e6-c24b-4085-83d8-55d53f523f0f}</Project>
+      <Name>Infonet.CStoreCommander.Resources</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="stdole">
+      <Guid>{00020430-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

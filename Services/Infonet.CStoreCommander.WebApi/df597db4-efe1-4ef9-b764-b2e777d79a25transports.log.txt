@@ -1,0 +1,7 @@
+SignalR.Transports.TransportHeartBeat Information: 0 : Connection 2a412fee-8554-4e5a-86be-55b46b318bf4 is New.
+SignalR.Transports.TransportHeartBeat Information: 0 : Connection 3ccff0dc-ba9f-4610-bb2e-36558689ed0f is New.
+SignalR.Transports.LongPollingTransport Information: 0 : Timeout(2a412fee-8554-4e5a-86be-55b46b318bf4)
+SignalR.Transports.LongPollingTransport Information: 0 : End(2a412fee-8554-4e5a-86be-55b46b318bf4)
+SignalR.Transports.WebSocketTransport Information: 0 : CloseSocket(3ccff0dc-ba9f-4610-bb2e-36558689ed0f)
+SignalR.Transports.TransportHeartBeat Verbose: 0 : Connection 3ccff0dc-ba9f-4610-bb2e-36558689ed0f exists. Closing previous connection.
+SignalR.Transports.WebSocketTransport Information: 0 : End(3ccff0dc-ba9f-4610-bb2e-36558689ed0f)

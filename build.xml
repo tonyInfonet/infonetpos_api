@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0" DefaultTargets="BuildAll">
+  <UsingTask AssemblyFile="$(MSBuildStartupDirectory)\InfonetService\packages\MSBuildTasks.1.5.0.235\tools\MSBuild.Community.Tasks.dll" TaskName="NUnit"/>
+  <PropertyGroup>
+    <Build>$(MSBuildProjectDirectory)\Build</Build>
+    <ProjectFile>Services\Infonet.CStoreCommander.WebApi\Infonet.CStoreCommander.WebApi.csproj</ProjectFile>
+	<SolutionFile>InfonetService.sln</SolutionFile>
+    <ProjectName>InfonetService</ProjectName>
+	<TestSolution>Tests\Infonet.CStoreCommander.WebApi.Tests\Infonet.CStoreCommander.WebApi.Tests.csproj</TestSolution>
+    <CopyTo>C:\inetpub\wwwroot\infonetApi</CopyTo>
+	<NUnitResultsFile>$(Build)\unit-test-results.xml</NUnitResultsFile>
+	<NUnitHtmlReportFile>$(Build)\unit-test-results.html</NUnitHtmlReportFile>
+	<ReportUnitExe>$(MSBuildStartupDirectory)\InfonetService\packages\ReportUnit.1.2.1\tools\ReportUnit.exe</ReportUnitExe>
+  </PropertyGroup> 
+
+  <PropertyGroup>
+    <BuildAllDependsOn>Build;Publish;RunTests;PublishReport</BuildAllDependsOn>
+  </PropertyGroup>
+  
+  <Target Name="BuildAll" DependsOnTargets="$(BuildAllDependsOn)"/>
+  
+  <Target Name="Build"> 
+    <RemoveDir Directories="$(Build)"/>  
+    <MSBuild Projects="$(SolutionFile)" Properties="Configuration=Release;OutputPath=$(Build)"></MSBuild>  
+  </Target>
+  
+  <Target Name="Publish"> 
+    <MSBuild Projects="$(ProjectFile)" Properties="Configuration=Release;OutputPath=$(Build);DeployOnBuild=true; PublishProfile=local"></MSBuild>  
+  </Target>
+  
+  <Target Name="RunTests">
+    <CreateItem Include="$(Build)/Infonet.CStoreCommander.WebApi.Tests.dll">
+      <Output TaskParameter="Include" ItemName="TestAssembly" />
+    </CreateItem>
+    <NUnit Assemblies="@(TestAssembly)"
+        ToolPath="C:\Program Files (x86)\NUnit 2.6.3\bin"
+        OutputXmlFile="$(NUnitResultsFile)"
+    />
+  </Target>
+  <Target Name="PublishReport"> 
+    <Exec Command="$(ReportUnitExe) $(NUnitResultsFile) $(NUnitHtmlReportFile)"/>  
+  </Target>
+</Project>

@@ -1,0 +1,23 @@
+SignalR.ReflectedHubDescriptorProvider Warning: 0 : Some of the classes from assembly "AxInterop.SIGPLUSLib, Version=2.23.0.0, Culture=neutral, PublicKeyToken=null" could Not be loaded when searching for Hubs. [C:\Users\optimus160.OPTIMUSDOM\AppData\Local\Temp\Temporary ASP.NET Files\root\83734988\8293a20a\assembly\dl3\fbd3e0ee\1816ac8f_0481d201\AxInterop.SIGPLUSLib.dll]
+Original exception type: ReflectionTypeLoadException
+Original exception message: Unable to load one or more of the requested types. Retrieve the LoaderExceptions property for more information.
+
+SignalR.ReflectedHubDescriptorProvider Warning: 0 : Loader exceptions messages: 
+SignalR.ReflectedHubDescriptorProvider Warning: 0 : System.IO.FileNotFoundException: Could not load file or assembly 'Interop.SIGPLUSLib, Version=2.23.0.0, Culture=neutral, PublicKeyToken=null' or one of its dependencies. The system cannot find the file specified.
+File name: 'Interop.SIGPLUSLib, Version=2.23.0.0, Culture=neutral, PublicKeyToken=null'
+
+=== Pre-bind state information ===
+LOG: DisplayName = Interop.SIGPLUSLib, Version=2.23.0.0, Culture=neutral, PublicKeyToken=null
+ (Fully-specified)
+LOG: Appbase = file:///C:/Project/infonet/InfonetService/Services/Infonet.CStoreCommander.WebApi/
+LOG: Initial PrivatePath = C:\Project\infonet\InfonetService\Services\Infonet.CStoreCommander.WebApi\bin
+Calling assembly : AxInterop.SIGPLUSLib, Version=2.23.0.0, Culture=neutral, PublicKeyToken=null.
+===
+LOG: This bind starts in default load context.
+LOG: Using application configuration file: C:\Project\infonet\InfonetService\Services\Infonet.CStoreCommander.WebApi\web.config
+LOG: Using host configuration file: C:\Users\optimus160.OPTIMUSDOM\Documents\IISExpress\config\aspnet.config
+LOG: Using machine configuration file from C:\Windows\Microsoft.NET\Framework\v4.0.30319\config\machine.config.
+LOG: Policy not being applied to reference at this time (private, custom, partial, or location-based assembly bind).
+LOG: The same bind was seen before, and was failed with hr = 0x80070002.
+
+

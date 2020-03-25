@@ -1,0 +1,174 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{63203FCC-BD31-4087-91DC-1ED23D609230}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Infonet.CStoreCommander.ADOData</RootNamespace>
+    <AssemblyName>Infonet.CStoreCommander.ADOData</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath />
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="adodb, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.15.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\log4net.2.0.5\lib\net45-full\log4net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AckrooService.cs" />
+    <Compile Include="AiteCardHolderService.cs" />
+    <Compile Include="BottleReturnService.cs" />
+    <Compile Include="CardService.cs" />
+    <Compile Include="CashBonusService.cs" />
+    <Compile Include="CashService.cs" />
+    <Compile Include="CommonUtility.cs" />
+    <Compile Include="CustomerService.cs" />
+    <Compile Include="DataSource.cs" />
+    <Compile Include="DbService.cs" />
+    <Compile Include="DipInputService.cs" />
+    <Compile Include="EncryptDecryptUtilityService.cs" />
+    <Compile Include="FuelDiscountService.cs" />
+    <Compile Include="FuelPumpService.cs" />
+    <Compile Include="FuelService.cs" />
+    <Compile Include="GivexService.cs" />
+    <Compile Include="IAckrooService.cs" />
+    <Compile Include="IAiteCardHolderService.cs" />
+    <Compile Include="IBottleReturnService.cs" />
+    <Compile Include="ICardService.cs" />
+    <Compile Include="ICashBonusService.cs" />
+    <Compile Include="ICashService.cs" />
+    <Compile Include="ICustomerService.cs" />
+    <Compile Include="IDipInputService.cs" />
+    <Compile Include="IEncryptDecryptUtilityService.cs" />
+    <Compile Include="IFuelDiscountService.cs" />
+    <Compile Include="IFuelPumpService.cs" />
+    <Compile Include="IFuelService.cs" />
+    <Compile Include="IGivexService.cs" />
+    <Compile Include="IKickBackService.cs" />
+    <Compile Include="ILoginService.cs" />
+    <Compile Include="IMaintenanceService.cs" />
+    <Compile Include="IPaymentSourceService.cs" />
+    <Compile Include="IPolicyService.cs" />
+    <Compile Include="IPrepayService.cs" />
+    <Compile Include="IPromoService.cs" />
+    <Compile Include="IReasonService.cs" />
+    <Compile Include="IReportService.cs" />
+    <Compile Include="IReturnSaleService.cs" />
+    <Compile Include="ISaleLineService.cs" />
+    <Compile Include="ISaleService.cs" />
+    <Compile Include="ISaleVendorCouponService.cs" />
+    <Compile Include="IShiftService.cs" />
+    <Compile Include="ISignatureService.cs" />
+    <Compile Include="ISiteMessageService.cs" />
+    <Compile Include="IStockService.cs" />
+    <Compile Include="ISuspendedSaleService.cs" />
+    <Compile Include="ITaxExemptService.cs" />
+    <Compile Include="ITaxService.cs" />
+    <Compile Include="ITenderService.cs" />
+    <Compile Include="ITeSystemService.cs" />
+    <Compile Include="IThemeService.cs" />
+    <Compile Include="ITillCloseService.cs" />
+    <Compile Include="ITillService.cs" />
+    <Compile Include="ITreatyService.cs" />
+    <Compile Include="IUserService.cs" />
+    <Compile Include="IUtilityService.cs" />
+    <Compile Include="IWexService.cs" />
+    <Compile Include="KickBackService.cs" />
+    <Compile Include="LoginService.cs" />
+    <Compile Include="MaintenanceService.cs" />
+    <Compile Include="PaymentSourceService.cs" />
+    <Compile Include="PolicyService.cs" />
+    <Compile Include="PrepayService.cs" />
+    <Compile Include="PromoService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReasonService.cs" />
+    <Compile Include="ReportService.cs" />
+    <Compile Include="ReturnSaleService.cs" />
+    <Compile Include="SaleLineService.cs" />
+    <Compile Include="SaleService.cs" />
+    <Compile Include="SaleVendorCouponService.cs" />
+    <Compile Include="ShiftService.cs" />
+    <Compile Include="SignatureService.cs" />
+    <Compile Include="SiteMessageService.cs" />
+    <Compile Include="SqlDBService.cs" />
+    <Compile Include="StockService.cs" />
+    <Compile Include="SuspendedSaleService.cs" />
+    <Compile Include="TaxExemptService.cs" />
+    <Compile Include="TaxService.cs" />
+    <Compile Include="TenderService.cs" />
+    <Compile Include="TeSystemService.cs" />
+    <Compile Include="ThemeService.cs" />
+    <Compile Include="TillCloseService.cs" />
+    <Compile Include="TillService.cs" />
+    <Compile Include="TreatyService.cs" />
+    <Compile Include="UserService.cs" />
+    <Compile Include="UtilityService.cs" />
+    <Compile Include="WexService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Services\Infonet.CStoreCommander.Logging\Infonet.CStoreCommander.Logging.csproj">
+      <Project>{4c57bc66-49b9-4d29-88a6-42ad135b2928}</Project>
+      <Name>Infonet.CStoreCommander.Logging</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Infonet.CStoreCommander.Entities\Infonet.CStoreCommander.Entities.csproj">
+      <Project>{ba59800d-27f8-432c-8e02-03ccf5e68e21}</Project>
+      <Name>Infonet.CStoreCommander.Entities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
